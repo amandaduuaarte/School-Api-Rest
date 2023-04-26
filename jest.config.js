@@ -5,7 +5,7 @@ const config = {
   coverageDirectory: 'coverage',
   testEnvironment: 'jest-environment-node',
   transform: {
-    '.+\\.js$': 'js-jest',
+    '\\.(js|jsx|ts|tsx)$': 'babel-jest',
   },
   coverageProvider: 'v8',
 };
