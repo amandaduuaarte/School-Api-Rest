@@ -14,5 +14,6 @@ module.exports = {
     'no-console': 'off',
     'no-undef': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'class-methods-use-this': 'off',
   },
 };
