@@ -2,7 +2,7 @@ import Student from '../models/student';
 
 class HomeController {
   async index(req, res) {
-    const newStudent = Student.create({
+    const newStudent = await Student.create({
       name: 'Amanda',
       last_name: 'Duarte',
       email: 'amanda@gmail.com',
@@ -10,9 +10,9 @@ class HomeController {
       height: 1.72,
       width: 68,
     });
-    res.status(200).json({
-      body: newStudent,
-    });
+    res.status(200).json(
+      newStudent,
+    );
   }
 }
 

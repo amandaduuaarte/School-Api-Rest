@@ -20,11 +20,8 @@ export default class User extends Model {
           type: Sequelize.STRING,
           defaultValue: '',
           validate: {
-            validate: {
-              isEmail: {
-                msg: 'Please enter a valid email address',
-              },
-
+            isEmail: {
+              msg: 'Please enter a valid email address',
             },
           },
         },
