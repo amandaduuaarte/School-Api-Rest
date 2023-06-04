@@ -3,7 +3,9 @@ import User from '../models/user';
 
 class TokenController {
   async store(req, res) {
-    const { email = '', password = '' } = req.body;
+    const { email, password } = req.body;
+
+    console.log(req.body);
 
     if (!email || !password) {
       return res.status(401).json({ errors: ['Email and password are required'] });
@@ -21,6 +23,7 @@ class TokenController {
     const token = jwt.sign({ id, email }, process.env.TOKEN_SECRET, {
       expiresIn: process.env.TOKEN_EXPIRATION,
     });
+
     return res.status(200).json({
       token,
     });
