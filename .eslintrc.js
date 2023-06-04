@@ -15,5 +15,6 @@ module.exports = {
     'no-undef': 'off',
     'import/no-extraneous-dependencies': 'off',
     'class-methods-use-this': 'off',
+    'import/first': 'off',
   },
 };
