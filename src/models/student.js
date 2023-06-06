@@ -4,12 +4,65 @@ export default class Student extends Model {
   static init(sequelize) {
     super.init(
       {
-        name: Sequelize.STRING,
-        last_name: Sequelize.STRING,
-        email: Sequelize.STRING,
-        age: Sequelize.INTEGER,
-        weight: Sequelize.FLOAT,
-        height: Sequelize.FLOAT,
+        name: {
+          type: Sequelize.STRING,
+          defaultValue: '',
+          validate: {
+            len: {
+              args: [3, 255],
+              msg: 'Name must be between 3 and 255 characters',
+            },
+          },
+        },
+        last_name: {
+          type: Sequelize.STRING,
+          defaultValue: '',
+          validate: {
+            len: {
+              args: [3, 255],
+              msg: 'LastName must be between 3 and 255 characters',
+            },
+          },
+        },
+        email: {
+          type: Sequelize.STRING,
+          defaultValue: '',
+          unique: {
+            msg: 'Email must be unique',
+          },
+          validate: {
+            isEmail: {
+              msg: 'Please enter a valid email address',
+            },
+          },
+        },
+        age: {
+          type: Sequelize.INTEGER,
+          defaultValue: '',
+          validate: {
+            isInt: {
+              msg: 'Please enter a valid age number',
+            },
+          },
+        },
+        weight: {
+          type: Sequelize.FLOAT,
+          defaultValue: '',
+          validate: {
+            isFloat: {
+              msg: 'Please enter a valid weight value',
+            },
+          },
+        },
+        height: {
+          type: Sequelize.FLOAT,
+          defaultValue: '',
+          validate: {
+            isFloat: {
+              msg: 'Please enter a valid weight value',
+            },
+          },
+        },
       },
       {
         sequelize,
