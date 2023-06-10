@@ -1,8 +1,16 @@
 import Student from '../models/student';
+import Photo from '../models/photo';
 
 class StudentController {
   async index(req, res) {
-    const students = await Student.findAll();
+    const students = await Student.findAll({
+      attributes: ['id', 'name', 'last_name', 'email', 'age', 'weight', 'height'],
+      order: [['id', 'DESC'], [Photo, 'id', 'DESC']],
+      include: {
+        model: Photo,
+        attributes: ['filename'],
+      },
+    });
 
     res.status(200).json({
       students,
