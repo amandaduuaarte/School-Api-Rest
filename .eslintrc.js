@@ -11,6 +11,12 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    ' no-console': 'off',
+    'no-console': 'off',
+    'no-undef': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'class-methods-use-this': 'off',
+    'import/first': 'off',
+    'no-param-reassign': 'off',
+    camelcase: 'off',
   },
 };
