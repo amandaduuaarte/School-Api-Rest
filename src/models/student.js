@@ -45,23 +45,9 @@ export default class Student extends Model {
             },
           },
         },
-        weight: {
+        school_grade: {
           type: Sequelize.FLOAT,
           defaultValue: '',
-          validate: {
-            isFloat: {
-              msg: 'Please enter a valid weight value',
-            },
-          },
-        },
-        height: {
-          type: Sequelize.FLOAT,
-          defaultValue: '',
-          validate: {
-            isFloat: {
-              msg: 'Please enter a valid weight value',
-            },
-          },
         },
       },
       {
