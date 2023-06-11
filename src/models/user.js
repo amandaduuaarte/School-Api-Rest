@@ -25,6 +25,10 @@ export default class User extends Model {
             },
           },
         },
+        category: {
+          type: Sequelize.STRING,
+          defaultValue: '',
+        },
         password_hash: {
           type: Sequelize.STRING,
           defaultValue: '',
