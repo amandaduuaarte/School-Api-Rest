@@ -21,7 +21,7 @@ class UserController {
 
   async index(req, res) {
     try {
-      const users = await User.findAll({ attributes: ['id', 'name', 'email'] });
+      const users = await User.findAll({ attributes: ['id', 'name', 'email', 'category'] });
       // Atributes me permite escolher o que quero exibir
       return res.status(200).json(users);
     } catch {

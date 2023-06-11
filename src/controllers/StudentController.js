@@ -4,11 +4,11 @@ import Photo from '../models/photo';
 class StudentController {
   async index(req, res) {
     const students = await Student.findAll({
-      attributes: ['id', 'name', 'last_name', 'email', 'age', 'weight', 'height'],
+      attributes: ['id', 'name', 'last_name', 'email', 'age', 'school_grade'],
       order: [['id', 'DESC'], [Photo, 'id', 'DESC']],
       include: {
         model: Photo,
-        attributes: ['filename'],
+        attributes: ['url', 'filename'],
       },
     });
 
@@ -41,7 +41,14 @@ class StudentController {
         });
       }
 
-      const student = await Student.findByPk(id);
+      const student = await Student.findByPk(id, {
+        attributes: ['id', 'name', 'email', 'age', 'school_grade'],
+        order: [['id', 'DESC'], [photo, 'id', 'DESC']],
+        include: {
+          model: Photo,
+          attributes: ['url', 'filename'],
+        },
+      });
 
       if (!student) {
         return res.status(400).json({
