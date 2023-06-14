@@ -1,5 +1,5 @@
 import Student from '../models/student';
-import Photo from '../models/photo';
+import Photo from '../models/profile';
 
 class StudentController {
   async index(req, res) {

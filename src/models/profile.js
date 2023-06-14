@@ -1,7 +1,7 @@
 import Sequelize, { Model } from 'sequelize';
 import app from '../config/app';
 
-export default class Photo extends Model {
+export default class Profile extends Model {
   static init(sequelize) {
     super.init(
       {
