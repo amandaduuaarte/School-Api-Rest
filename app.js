@@ -10,7 +10,7 @@ import homeRoutes from './src/routes/home';
 import userRoutes from './src/routes/user';
 import tokenRoutes from './src/routes/token';
 import studentRoutes from './src/routes/student';
-import photoRoutes from './src/routes/photo';
+import profileRoutes from './src/routes/profile';
 import fileRoutes from './src/routes/file';
 import studentFile from './src/routes/studentFile';
 
@@ -32,7 +32,7 @@ class App {
     this.app.use('/users/', userRoutes);
     this.app.use('/tokens/', tokenRoutes);
     this.app.use('/students/', studentRoutes);
-    this.app.use('/photos/', photoRoutes);
+    this.app.use('/profile/', profileRoutes);
     this.app.use('/files/', fileRoutes);
     this.app.use('/student_file/', studentFile);
   }
