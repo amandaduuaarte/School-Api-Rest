@@ -60,5 +60,6 @@ export default class Student extends Model {
 
   static associate(models) {
     this.hasMany(models.Photo, { foreignKey: 'student_id' });
+    this.hasMany(models.StudentFile, { foreignKey: 'student_file_id' });
   }
 }

@@ -7,7 +7,7 @@ class StudentController {
       attributes: ['id', 'name', 'last_name', 'email', 'age', 'school_grade'],
       order: [['id', 'DESC'], [Photo, 'id', 'DESC']],
       include: {
-        model: Photo,
+        model: [Photo],
         attributes: ['url', 'filename'],
       },
     });
