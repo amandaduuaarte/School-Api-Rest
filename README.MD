@@ -1,41 +1,28 @@
-{
-  "api": {
-    "users":{
-      "id":"1",
-      "name": "Amanda",
-      "email": "amanda@gmail.com",
-      "type": "teacher/student",
-      "password": "12345",
-      "password_hash": "yrueyrie"
-    },
-    "students": {
-      "id": "1",
-      "name": "Amanda",
-      "lastName": "Duarte",
-      "age": 21,
-      "schoolGrade": "3 ano do EM",
-      "studentsFiles": {
-        "originalname": "redação",
-        "filename": "radacao",
-        "student_id": "3"
-      },
-      "photos": {
-        "originalname": "photo",
-        "filename": "photo",
-        "student_id": "2"
-      }
-    },
-    "studentTexts":{
-      "originalname": "redação",
-      "filename": "redacao",
-      "student_id": "3", 
-      "student_file_id": "1",
-      "grade": "980",
-      "comments": {
-        "line": "24",
-        "message":"Voce deve melhorar...",
-        "competencia": "4"
-      }
-    }
-  }
-}
+<h1 align="center">
+📄<br>School Api
+</h1>
+
+## 📚 Api Rest
+
+> This repository was created with the intention of reinforcing my knowledge in developing REST APIs using Node.js.
+
+---
+
+## Resources used in the project
+
+* Node js
+* Express 
+* Sequelize
+* MariaDb
+
+
+<div align="center">
+  <br/>
+  <br/>
+  <br/>
+    <div>
+      <sub>Copyright © 2023 - <a href="https://github.com/amandaduuaarte">Amanda Duarte</sub></a>
+    </div>
+    <br/>
+    💖
+</div>
