@@ -1,4 +1,4 @@
 export default {
   // url: 'http://localhost:3033/',
-  url: 'http://34.151.208.195/',
+  url: process.env.APP_URL_PROD,
 };
