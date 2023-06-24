@@ -2,11 +2,11 @@ import Sequelize from 'sequelize';
 import databaseConfig from '../config/database';
 import Student from '../models/student';
 import User from '../models/user';
-import Photo from '../models/profile';
+import Profile from '../models/profile';
 import File from '../models/file';
 import StudentFile from '../models/studentFile';
 
-const models = [Student, User, Photo, File, StudentFile];
+const models = [Student, User, Profile, File, StudentFile];
 
 const connection = new Sequelize(databaseConfig);
 

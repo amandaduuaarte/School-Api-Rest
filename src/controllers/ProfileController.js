@@ -16,10 +16,10 @@ class Profileontroller {
       try {
         const { originalname, filename } = req.file;
         const { student_id } = req.body;
-        const photo = await Profile.create({ originalname, filename, student_id });
+        const profile = await Profile.create({ originalname, filename, student_id });
 
         return res.json({
-          photo,
+          profile,
         });
       } catch (error) {
         return res.status(400).json({
