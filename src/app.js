@@ -3,16 +3,16 @@ import { resolve } from 'path';
 
 dotenv.config();
 
-import './src/database';
+import './database';
 
 import express from 'express';
-import homeRoutes from './src/routes/home';
-import userRoutes from './src/routes/user';
-import tokenRoutes from './src/routes/token';
-import studentRoutes from './src/routes/student';
-import profileRoutes from './src/routes/profile';
-import fileRoutes from './src/routes/file';
-import studentFile from './src/routes/studentFile';
+import homeRoutes from './routes/home';
+import userRoutes from './routes/user';
+import tokenRoutes from './routes/token';
+import studentRoutes from './routes/student';
+import profileRoutes from './routes/profile';
+import fileRoutes from './routes/file';
+import studentFile from './routes/studentFile';
 
 class App {
   constructor() {
