@@ -32,7 +32,7 @@ export default class Profile extends Model {
       },
       {
         sequelize,
-        tableName: 'photos',
+        tableName: 'profile',
       },
     );
     return this;
